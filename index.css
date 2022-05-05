@@ -1,0 +1,252 @@
+:root {
+    --clrDarkOcean: #348888;
+    --clrOcean: #22BABB;
+    --clrLightOcean: #9EF8EE;
+    --clrOrange: #FA7F08;
+    --clrDarkOrange: #F24405;
+    --clrLightGreen: #9AEBA3;
+    --clrVeryLightGreen: #DAFDBA;
+    --clrGreen: #03A64A;
+    --clrDarkGreen: #025940;
+    --clrDarkBlue: #024059;
+    --colorJean: #04BF8A;
+    --clrLightPink: #E9E5F5;
+    --clrLightBlue: #B1C4DE;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--clrLightPink);
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: var(--clrLightBlue);
+}
+
+header {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    /* align-items: space-between; */
+}
+
+/* nav li:first-child {
+    margin-right: auto;
+} */
+
+nav a {
+    font-size: 1.1rem;
+    display: block;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--clrDarkBlue);
+}
+
+section ul {
+    list-style-type: none;
+}
+
+figure {
+    border: 8px solid salmon;
+    border-radius: 4px;
+    max-height: 400px;
+    margin: 0 0 0.5rem 0;
+    overflow: hidden;
+    position: relative;
+}
+
+section img {
+    margin-bottom: -4px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 -150px;
+
+}
+
+figcaption {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.875rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+figcaption a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--colorJean);
+}
+
+#mission {
+    margin-bottom: 3rem;
+}
+
+.mission-text {
+    display: block;
+    line-height: 1.;
+}
+
+.mission-img {
+    max-height: 100px;
+    display: block;
+}
+
+.footer {
+    background-color: var(--clrVeryLightGreen);
+}
+
+footer {
+    padding: 3rem;
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+}
+
+footer h4 {
+    margin-top: 0;
+}
+
+footer li {
+    margin-right: 1rem;
+}
+
+footer address {
+    font-style: normal;
+    margin-top: 2rem;
+    font-weight: bold;
+
+}
+
+@media (min-width: 550px) {
+    section ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    section li {
+        flex-basis: 49.5%;
+    }
+
+    section img {
+        object-position: 0;
+    }
+
+    .mission-text {
+        /*clear float*/
+        display: flow-root;
+        max-width: 900px;
+    }
+
+    .mission-img {
+        float: left;
+        /*shape-outside: polygon(35.8% 94.8%, 34.6% 87%, 51.6% 4%, 55.1% 2.3%);*/
+        shape-outside: polygon(30.02% 126.99%, 29.71% 128.67%, 50.6% 0.59%, 53.1% 0.03%);
+        /* max-height: 268px; */
+        max-height: 212px;
+        /* object-position: 0 bottom; */
+    }
+
+    footer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        color: var(--clrDarkBlue);
+    }
+
+    footer address {
+        margin-top: 0;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 1.2em;
+    }
+
+    nav li {
+        flex-basis: auto;
+        margin-bottom: 0;
+    }
+
+    nav a {
+        color: black;
+        background-color: transparent;
+    }
+}
+
+
+@media (min-width: 800px) {
+
+    section li,
+    .social {
+        flex-basis: 32.5%;
+    }
+
+    section h2 {
+        margin-left: 100px;
+    }
+
+    address {
+        flex-basis: 65.5%;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        margin: 0 auto;
+        order: 2;
+    }
+
+    nav li:nth-child(2),
+    nav li:nth-child(3) {
+        order: 1;
+    }
+
+    nav li:nth-child(4),
+    nav li:nth-child(5) {
+        order: 3;
+    }
+}
